@@ -5,13 +5,13 @@ on:
     branches:    
       - develop
   workflow_dispatch:
-  jobs:
-  unitest:
+    jobs:
+      unitest:
     name: UnitTest (XUnit)
     runs-on: ubuntu-latest
     environment:
       name: dev
-    steps:
+ steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
@@ -34,3 +34,4 @@ on:
       with:
         name: Unit Test Results
         path: '${{ github.workspace }}/coveragereport/*'
+      
